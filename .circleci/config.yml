@@ -17,7 +17,7 @@ jobs:
       JVM_OPTS: -Xmx3200m
       TERM: dumb
 
-    parallelism: 3
+    parallelism: 5
     steps:
       - checkout
 
