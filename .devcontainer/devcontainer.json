@@ -14,7 +14,8 @@
 			"settings": {},
 			// Add the IDs of extensions you want installed when the container is created.
 			"extensions": [
-				"vscjava.vscode-java-pack"
+				"vscjava.vscode-java-pack",
+				"jodyh.circleci-vscode"
 			]
 		}
 	},
@@ -25,8 +26,11 @@
 				"icon": "terminal-bash"
 			}
 		},
-		"remote.containers.copyGitConfig": true
-	}
+		"terminal.integrated.defaultProfile.linux": "bash"
+	},
+	"mounts": [
+		"source=${env:HOME}${env:USERPROFILE}/.circleci,target=/home/circleci/.circleci,type=bind"
+	]
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
 	// Use 'postCreateCommand' to run commands after the container is created.
