@@ -44,6 +44,7 @@ jobs:
           command: |
             cd lib/src/test/java
             # Get list of classnames of tests that should run on this node
+            echo $(circleci tests glob "**/*.java") 
             CLASSNAMES=$(circleci tests glob "**/*.java" \
               | cut -c 1- | sed 's@/@.@g' \
               | sed 's/.\{5\}$//' \
