@@ -17,7 +17,7 @@ jobs:
       JVM_OPTS: -Xmx3200m
       TERM: dumb
 
-    parallelism: 2
+    parallelism: 5
     steps:
       - checkout
 
@@ -66,3 +66,5 @@ jobs:
       - store_artifacts:
           path: lib/build/test-results/test
           when: always
+
+# VS Code Extension Version: 1.2.0
